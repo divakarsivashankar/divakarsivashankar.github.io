@@ -1,0 +1,23 @@
+.inner-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+
+.page-title h1 {
+    font-size: 60px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content-section,
+.media-section {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.content-section {
+    margin-left: 50px;
+    margin-right: 50px;
+}
