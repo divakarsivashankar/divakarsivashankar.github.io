@@ -1,7 +1,7 @@
 <div class="inner-container">
   <div class="content-section">
     <div class="page-title">
-      <h1>Career</h1>
+      <h1>Contact</h1>
     </div>
     <div>
       <p>
@@ -22,5 +22,10 @@
       </p>
     </div>
   </div>
-  <div class="media-section"></div>
+  <div class="media-section">
+    <agm-map [latitude]="lat" [longitude]="lng" [minZoom]="15">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </div>
 </div>
+

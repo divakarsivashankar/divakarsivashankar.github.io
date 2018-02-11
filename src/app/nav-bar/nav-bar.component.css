@@ -2,43 +2,37 @@
     min-height: 500px;
     height: 100%;
     width: 56px;
-    /* background: #222; */
-    /* background: #f7f7f7; */
     background: #181818;
     color: #fff;
     position: absolute;
     top: 0;
     left: 0;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li a{
-        display: block;
-        height: 30px;
-        width: 30px;
-        padding: 13px;
-        transition: 0.3s all ease-out;
+nav ul li a {
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding: 13px;
+    transition: 0.3s all ease-out;
 }
+
 a svg path {
     transition: 0.3s all ease-out;
 }
 
-a.active svg path{
-    /* fill: #65fe00; */
-    fill: #009688;
+a.active svg path {
+    fill: #6dfcff;
 }
 
-nav ul li a:hover {
-    /* background: #f1f1f1; */
-}
-
-nav ul li a:hover svg path{
-    /* fill: #65fe00; */
-    fill: #009688;
+nav ul li a:hover svg path {
+    fill: #6dfcff;
 }
 
 .logo a {

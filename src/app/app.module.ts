@@ -11,6 +11,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { CareerComponent } from './career/career.component';
+import { ContactComponent } from './contact/contact.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 const routes: Routes = [
   {
@@ -29,6 +32,10 @@ const routes: Routes = [
     path:'career',
     component: CareerComponent
   },
+  {
+    path:'contact',
+    component: ContactComponent
+  },
   { 
     path: '**',
     component: PageNotFoundComponent
@@ -44,11 +51,15 @@ const routes: Routes = [
     ProjectsComponent,
     PageNotFoundComponent,
     HomeComponent,
-    CareerComponent
+    CareerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDeg60CJIFpcZuMXJz6Y3yx9hh1GrPHAOg'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
