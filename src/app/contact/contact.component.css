@@ -29,6 +29,87 @@
     margin-right: 50px;
 }
 
+
 agm-map {
     height: 100vh;
+}
+
+.elastic {
+    animation: Elastic 0.5s;
+}
+
+.show-in {
+    transform: scale(1, 1);
+}
+
+h1 span {
+    opacity: 0;
+    font-size: 60px;
+    color: white;
+    display: inline-block;
+    cursor: default;
+}
+
+h1 span.show {
+    opacity: 1;
+}
+
+
+h1 span.bounce {
+    animation: BounceIn 0.5s;
+    opacity: 1;
+}
+
+
+@keyframes Elastic {
+    0% {
+        transform: matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    25% {
+        transform: matrix3d(1.1, 0, 0.00, 0, 0.00, 0.9, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.1, 0, 0.00, 0, 0.00, 0.9, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    50% {
+        transform: matrix3d(0.8, 0, 0.00, 0, 0.00, 1.1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(0.8, 0, 0.00, 0, 0.00, 1.1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    75% {
+        transform: matrix3d(1, 0, 0.00, 0, 0.00, 0.9, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1, 0, 0.00, 0, 0.00, 0.9, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    100% {
+        transform: matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+@keyframes BounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
 }
