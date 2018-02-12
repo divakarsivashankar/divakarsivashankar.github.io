@@ -30,8 +30,32 @@
 }
 
 
+
+
 agm-map {
     height: 100vh;
+    color: "#0c0000";
+}
+
+.animated-Up {
+    position: absolute;
+    background: #363636;
+    top:50px;
+    right:20%;
+    z-index: 999999;
+    width: 230px;
+    padding: 20px;
+    color:#fff;
+    font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    opacity: 100;
+}
+.animated-Up span {
+    font-size: 16px;
+}
+.animated-Up span span {
+    color:#08fdd8;
 }
 
 .elastic {
@@ -111,5 +135,21 @@ h1 span.bounce {
         opacity: 1;
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1)
+    }
+}
+
+@keyframes 
+fadeInUp{
+    0% {
+        opacity:0;
+        -webkit-transform:translate3d(0,100%,0);
+        -ms-transform:translate3d(0,100%,0);
+        transform:translate3d(0,100%,0)
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:none;
+        -ms-transform:none;
+        transform:none
     }
 }
