@@ -54,8 +54,16 @@ h1 {
 }
 
 img {
-    transform: scale(0, 0);
+    opacity: 0;
+    width: 512px;
+    height: 619px;
+    
+    transform: scale(0, 0) rotate(90deg);
     transition: 0.5s all ease-in-out;
+    -moz-transform: scale(1, 1.5) rotate(90deg);
+    -webkit-transform: scale(1, 1.5) rotate(90deg);
+    opacity: 1;
+    
 }
 
 .show-in {
@@ -68,6 +76,20 @@ h1 span {
     color: white;
     display: inline-block;
     cursor: default;
+}
+
+.typingMyCode {
+    opacity: 1;
+    font-size: 15px;
+    color: white;
+    text-align:left;
+    position: fixed; 
+    bottom: 0;
+
+}
+
+.typingMyCode div {
+    display: inline-block;
 }
 
 

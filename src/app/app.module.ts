@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { TypingAnimationDirective } from 'angular-typing-animation';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -52,7 +52,8 @@ const routes: Routes = [
     PageNotFoundComponent,
     HomeComponent,
     CareerComponent,
-    ContactComponent
+    ContactComponent,
+    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,
