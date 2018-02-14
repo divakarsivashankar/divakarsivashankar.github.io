@@ -12,8 +12,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { CareerComponent } from './career/career.component';
 import { ContactComponent } from './contact/contact.component';
-
 import { AgmCoreModule } from '@agm/core';
+import { TypingAnimationModule } from 'angular-typing-animation/typing-animation.module';
 
 const routes: Routes = [
   {
@@ -52,15 +52,15 @@ const routes: Routes = [
     PageNotFoundComponent,
     HomeComponent,
     CareerComponent,
-    ContactComponent,
-    TypingAnimationDirective
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDeg60CJIFpcZuMXJz6Y3yx9hh1GrPHAOg'
-    })
+    }),
+    TypingAnimationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
