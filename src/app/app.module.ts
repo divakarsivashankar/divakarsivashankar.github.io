@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { CareerComponent } from './career/career.component';
 import { ContactComponent } from './contact/contact.component';
+import { AccomplishmentsComponent } from './accomplishments/accomplishments.component';
+
 import { AgmCoreModule } from '@agm/core';
 import { TypingAnimationModule } from 'angular-typing-animation/typing-animation.module';
 
@@ -36,6 +38,10 @@ const routes: Routes = [
     path:'contact',
     component: ContactComponent
   },
+  {
+    path:'accomplishments',
+    component: AccomplishmentsComponent
+  },
   { 
     path: '**',
     component: PageNotFoundComponent
@@ -52,7 +58,8 @@ const routes: Routes = [
     PageNotFoundComponent,
     HomeComponent,
     CareerComponent,
-    ContactComponent
+    ContactComponent,
+    AccomplishmentsComponent
   ],
   imports: [
     BrowserModule,
