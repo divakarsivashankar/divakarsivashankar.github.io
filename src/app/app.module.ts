@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TypingAnimationDirective } from 'angular-typing-animation';
+
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -15,7 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AccomplishmentsComponent } from './accomplishments/accomplishments.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { TypingAnimationModule } from 'angular-typing-animation/typing-animation.module';
+import { TypewriterService } from './typewriter.service';
 
 const routes: Routes = [
   {
@@ -66,10 +66,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDeg60CJIFpcZuMXJz6Y3yx9hh1GrPHAOg'
-    }),
-    TypingAnimationModule
+    })
   ],
-  providers: [],
+  providers: [TypewriterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
