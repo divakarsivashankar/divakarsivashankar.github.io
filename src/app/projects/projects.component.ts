@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+declare var $:any;
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-
-  constructor() { }
+  constructor(private config: NgbCarouselConfig) {
+    config.interval = 10000;
+    config.wrap = true;
+    config.keyboard = false;
+  }
 
   animateOnHover(e) {
     let ele = e.target;
@@ -18,6 +22,10 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('.slider').bxSlider({
+      preloadImages: 'all',
+      adaptiveHeight: true
+     });
   }
 
   ngAfterViewInit() {
@@ -34,13 +42,14 @@ export class ProjectsComponent implements OnInit {
       }
     });
 
-     setTimeout(() => {
+    setTimeout(() => {
       let elem = Array.from(document.getElementsByClassName('blast'));
       elem.forEach(element => {
         element.classList.remove('bounce');
         element.classList.add('show');
       });
     }, 3300);
+     
   }
 
 }

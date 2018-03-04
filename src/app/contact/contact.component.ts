@@ -225,16 +225,12 @@ export class ContactComponent implements OnInit {
         });
 
 
-        let ele = Array.from(document.getElementsByClassName('animated-Up'));
+        let ele = Array.from(document.getElementsByClassName('map-info'));
         ele.forEach(element => {
             let item = element;
             setTimeout(() => {
                 item.classList.add('fadeInUp');
-            }, timer);
-
-            if (timer < 3200) {
-                timer = timer + 100;
-            }
+            }, 1000);
         });
 
 

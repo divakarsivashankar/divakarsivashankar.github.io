@@ -1,0 +1,25 @@
+.running-program {
+    line-height: normal;
+    height: 100vh;
+}
+
+.running-program {
+    font-family: 'Roboto Mono', monospace;
+    color: #6d6d6d;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.running-program span {
+    display: block;
+}
+
+.running-program:after {
+    /* content: '|'; */
+}
+
+@media only screen and (max-width: 768px) {
+    .running-program {
+        /* display: none; */
+    }
+}
