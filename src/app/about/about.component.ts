@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TypewriterService } from '../typewriter.service';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private typewriterService: TypewriterService) { }
 
   animateOnHover(e) {
     let ele = e.target;
@@ -34,13 +35,19 @@ export class AboutComponent implements OnInit {
       }
     });
 
-     setTimeout(() => {
+    setTimeout(() => {
       let elem = Array.from(document.getElementsByClassName('blast'));
       elem.forEach(element => {
         element.classList.remove('bounce');
         element.classList.add('show');
       });
     }, 3300);
+
+    let typer = document.getElementById('running-program');
+
+    let typewriter = this.typewriterService.setupTypewriter(typer);
+
+    typewriter.type();
   }
 
 }

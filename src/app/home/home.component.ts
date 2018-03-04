@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { TypewriterService } from '../typewriter.service';
+
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { TypewriterService } from '../typewriter.service';
 })
 export class HomeComponent {
 
-  constructor(private typewriterService: TypewriterService) { }
+  constructor() { }
 
   animateOnHover(e) {
     let ele = e.target;
@@ -48,11 +48,7 @@ export class HomeComponent {
     }, 3300);
 
 
-    let typer = document.getElementById('running-program');
 
-    let typewriter = this.typewriterService.setupTypewriter(typer);
-
-    typewriter.type();
   }
 
 }

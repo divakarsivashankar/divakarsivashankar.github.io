@@ -16,33 +16,39 @@ import { AccomplishmentsComponent } from './accomplishments/accomplishments.comp
 
 import { AgmCoreModule } from '@agm/core';
 import { TypewriterService } from './typewriter.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: HomeComponent
   },
   {
-    path:'about',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path:'projects',
+    path: 'projects',
     component: ProjectsComponent
   },
   {
-    path:'career',
+    path: 'career',
     component: CareerComponent
   },
   {
-    path:'contact',
+    path: 'contact',
     component: ContactComponent
   },
   {
-    path:'accomplishments',
+    path: 'accomplishments',
     component: AccomplishmentsComponent
   },
-  { 
+  {
+    path: 'skills',
+    component: SkillsComponent
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }
@@ -59,14 +65,16 @@ const routes: Routes = [
     HomeComponent,
     CareerComponent,
     ContactComponent,
-    AccomplishmentsComponent
+    AccomplishmentsComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDeg60CJIFpcZuMXJz6Y3yx9hh1GrPHAOg'
-    })
+    }),
+    NgbModule.forRoot()
   ],
   providers: [TypewriterService],
   bootstrap: [AppComponent]

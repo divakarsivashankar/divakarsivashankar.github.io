@@ -1,0 +1,44 @@
+.map-info {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    z-index: 1;
+    top: 30px;
+    left: 30px;
+    opacity: 0;
+    font-size: 14px;
+}
+
+.relative-section {
+    position: relative;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,100%,0);
+        -ms-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s;
+    opacity: 1;
+}
+
+.map-info span span {
+    color: #5bdbbb;
+}
+
+a {
+    color: #5bdbbb;
+}
