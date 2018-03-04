@@ -12,4 +12,22 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleMenu() {
+    if (document.getElementsByClassName('main-navigation')[0].classList.contains('hide')) {
+      document.getElementsByClassName('main-navigation')[0].classList.remove('hide');
+    } else {
+      document.getElementsByClassName('main-navigation')[0].classList.add('hide');
+    }
+    if (document.getElementsByClassName('ham')[0].classList.contains('close')) {
+      document.getElementsByClassName('ham')[0].classList.remove('close');
+    } else {
+      document.getElementsByClassName('ham')[0].classList.add('close');
+    }
+  }
+
+  collapseAfter() {
+    document.getElementsByClassName('main-navigation')[0].classList.add('hide');
+      document.getElementsByClassName('ham')[0].classList.remove('close');
+  }
+
 }

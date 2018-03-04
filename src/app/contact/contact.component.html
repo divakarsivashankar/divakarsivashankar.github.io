@@ -5,43 +5,51 @@
         <span class="blast" (mouseenter)="animateOnHover($event)">Contact</span>
       </h1>
     </div>
+    <div class="mycontent-section">
     <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-        eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-        porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-        eu, pretium quis, sem.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-      </p>
-
+      <div>
+        <p>+65 8712 0790</p>
+        <a href="mailto:divakarsivashankar@gmail.com">divakarsivashankar@gmail.com</a>
+      </div>
+      <div class="social-links-contact">
+        <div>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/divakar-sivashankar">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Divakarsiva">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/divakar.siva.3">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 
-  <div class="animated-Up" (mouseenter)="animateOnHover($event)" >
-  Divakar Sivashankar, 
-    <br> Singapore
-    <br>
- 
-    <span>
-      <span>Email @</span>
-      : divakarsivashankar@gmail.com
-    </span>
-  </div>
 
 
-  <div class="media-section">
 
-    <agm-map [latitude]="lat" [longitude]="lng" [minZoom]="15" [styles]="styles">
+  <div class="media-section relative-section">
+    <div class="map-info animated-Up">
+      Divakar Sivashankar, Singapore
+      <br>
+      <br>
+      <span>
+        <span>Email @</span>
+        : divakarsivashankar@gmail.com
+      </span>
+    </div>
+    <agm-map [latitude]="lat" [longitude]="lng" [minZoom]="18" [styles]="styles">
       <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
     </agm-map>
   </div>

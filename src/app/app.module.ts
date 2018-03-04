@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TypingAnimationDirective } from 'angular-typing-animation';
+
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -15,34 +15,35 @@ import { ContactComponent } from './contact/contact.component';
 import { AccomplishmentsComponent } from './accomplishments/accomplishments.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { TypingAnimationModule } from 'angular-typing-animation/typing-animation.module';
+import { TypewriterService } from './typewriter.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: HomeComponent
   },
   {
-    path:'about',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path:'projects',
+    path: 'projects',
     component: ProjectsComponent
   },
   {
-    path:'career',
+    path: 'career',
     component: CareerComponent
   },
   {
-    path:'contact',
+    path: 'contact',
     component: ContactComponent
   },
   {
-    path:'accomplishments',
+    path: 'accomplishments',
     component: AccomplishmentsComponent
   },
-  { 
+  {
     path: '**',
     component: PageNotFoundComponent
   }
@@ -59,7 +60,7 @@ const routes: Routes = [
     HomeComponent,
     CareerComponent,
     ContactComponent,
-    AccomplishmentsComponent
+    AccomplishmentsComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,9 +68,9 @@ const routes: Routes = [
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDeg60CJIFpcZuMXJz6Y3yx9hh1GrPHAOg'
     }),
-    TypingAnimationModule
+    NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [TypewriterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
