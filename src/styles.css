@@ -89,6 +89,7 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
+    margin-bottom: 25px;
     vertical-align: baseline;
 }
 
@@ -207,7 +208,7 @@ nav ul li a:hover svg path {
 }
 
 .mycontent-section {
-    margin-top: 100px;
+    
 }
 
 .content-section,
