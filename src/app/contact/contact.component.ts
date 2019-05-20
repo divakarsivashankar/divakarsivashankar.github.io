@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./contact.component.css']
     })
 export class ContactComponent implements OnInit {
-    lat: number = 1.353775;
-    lng: number = 103.9582;
+    lat: number = 1.2834;
+    lng: number = 103.8607;
     styles = [
         {
             "featureType": "all",
